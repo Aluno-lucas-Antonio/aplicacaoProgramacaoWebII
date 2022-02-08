@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head'); %>
+</head>
+<body class="container">
+
+    <header>
+        <%- include('./partials/header'); %>
+    </header>
+    <main>
+        <h1>Editar Aluno: </h1>
+        <div class="card">
+            <form action="/editar" method="POST">
+                <label for="nome">Nome: </label><br>
+                    <input type="text" id="nome" name="nome" placeholder="Nome aluno" ><br>
+                <label for="nome">Sobrenome: </label><br>
+                    <input type="text" id="sobreNome" name="sobreNome" placeholder="Sobrenome do aluno" ><br>
+                <label for="email">E-mail: </label><br>
+                    <input type="email" id="email" name="email" placeholder="E-mail do aluno" ><br>
+            <button class="btn btn-success" type="submit">Editar aluno</button>
+        
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <%- include('./partials/footer'); %>
+    </footer>
+    
+</body>
+</html>

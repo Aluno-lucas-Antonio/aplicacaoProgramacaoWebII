@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head'); %>
+</head>
+<body class="container">
+<header>
+    <%- include('./partials/header'); %>
+</header>
+    <%- include('./partials/msg'); %>
+<main>
+
+        <h1>Lista dos Alunos</h1>
+        <a href= "/cadastro"><button class="btn btn-success">Cadastrar</button></a></br><hr> 
+            <% alunos.forEach((alunos)=>{ %>
+                Id: <td><%=alunos.id%></td></br>
+                Nome: <td><%=alunos.nome%></td><td> <%=alunos.sobreNome%></td></br>
+                Email: <td><%=alunos.email%></td></br>
+                Data de Cadastro: <td><%=moment(alunos.createdAt).format('DD/MM/YYYY - HH:mm')%></td></br>
+                
+                <a href= "/deletar/<%=alunos.id%>"><button class="btn btn-danger">Deletar</button></a>
+                <a href= "/editar/<%=alunos.id%>"><button class="btn btn-success">Editar</button></a>                
+                <hr>
+            <% }) %>
+            
+
+
+</main>
+
+<footer>
+    <%- include('./partials/footer'); %>
+</footer>
+
+</body>
+</html>
