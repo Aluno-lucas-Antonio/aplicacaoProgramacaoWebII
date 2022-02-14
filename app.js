@@ -1,7 +1,7 @@
 const express = require("express")
 const app = express()
 const moment = require('moment')
-const porta = 3000
+const porta = 2000
 const Aluno = require('./models/Aluno')//model aluno, isere um aluno
 const session = require('express-session')
 const flash = require('connect-flash')
@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: true}))
 
 //sessão
 app.use(session({
-    secret: "cursodenode",//chave de acesso
+    secret: "alunopw",//chave de acesso
     resave: true,
     saveUninitialized: true
 }))

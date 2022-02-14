@@ -1,7 +1,7 @@
 const Sequelize = require("sequelize")
 
 //conexão com o banco de dados
-const sequelize = new Sequelize('aula2','root','031717440',{
+const sequelize = new Sequelize('cadastro','root','Caraluma@805',{
     host: "localhost",  // local do banco
     dialect: "mysql"    // tipo do banco de dados
 }) 
@@ -16,5 +16,6 @@ module.exports = {
     Sequelize: Sequelize,
     sequelize: sequelize
 }
+
 
 
