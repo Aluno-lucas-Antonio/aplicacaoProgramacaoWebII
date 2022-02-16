@@ -6,4 +6,5 @@ instalar dependências:
     npm install express-session
     npm install moment --save
     npm install --save mysql2
+    npm install --save pg pg-hstore
     npm i sequelize
