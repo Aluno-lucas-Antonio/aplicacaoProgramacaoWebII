@@ -5,6 +5,7 @@ const porta = 2000
 const Aluno = require('./models/Aluno')//model aluno, isere um aluno
 const session = require('express-session')
 const flash = require('connect-flash')
+const cookieParser = require('cookie-parser');
 
 
 //template engine
@@ -14,7 +15,7 @@ app.locals.moment = require('moment');
 //bodyParser
 app.use(express.json())
 app.use(express.urlencoded({ extended: true}))
-
+app.use(cookieParser());
 //sessão
 app.use(session({
     secret: "alunopw",//chave de acesso
