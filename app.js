@@ -106,7 +106,10 @@ app.post('/editar',(req, res)=>{
     Aluno.update({
         nome: req.body.nome,
         sobreNome: req.body.sobreNome,
-        email: req.body.email
+        email: req.body.email,
+        endereço: req.body.endereco,
+        cidade: req.body.cidade,
+        estado: req.body.estado
     }, {
         where: {id: id},
     }).then(()=>{

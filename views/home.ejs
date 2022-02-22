@@ -16,6 +16,9 @@
                 Id: <td><%=alunos.id%></td></br>
                 Nome: <td><%=alunos.nome%></td><td> <%=alunos.sobreNome%></td></br>
                 Email: <td><%=alunos.email%></td></br>
+                Endereço: <td><%=alunos.endereco%></td></br>
+                Cidade: <td><%=alunos.cidade%></td></br>
+                Estado: <td><%=alunos.estado%></td></br>
                 Data de Cadastro: <td><%=moment(alunos.createdAt).format('DD/MM/YYYY - HH:mm')%></td></br>
                 
                 <a href= "/deletar/<%=alunos.id%>"><button class="btn btn-danger">Deletar</button></a>
